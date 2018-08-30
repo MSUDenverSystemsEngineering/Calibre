@@ -143,7 +143,7 @@ Try {
 		## <Perform Installation tasks here>
 
 
-        $exitCode = Execute-MSI -Action "Install" -Path "$dirFiles\Calibre-${appVersion}.msi" -Parameters '/qn /norestart' -WindowStyle "Hidden" -PassThru
+        $exitCode = Execute-MSI -Action "Install" -Path "$dirFiles\Calibre-${appVersion}.msi" -Parameters '/qn /norestart' -PassThru
         If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 
 
